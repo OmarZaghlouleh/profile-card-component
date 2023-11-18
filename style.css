@@ -1,0 +1,190 @@
+:root{
+    --dart-cyan-color:hsl(185, 75%, 39%);
+    --very-dark-desaturated-blue-color:hsl(229, 23%, 23%);
+    --dark-grayish-blue-color:hsl(227, 10%, 46%);
+    --container-width:350px;
+    --container-height:360px;
+    --container-border-radius:12px;
+}
+*{
+    font-family: 'Kumbh Sans', Courier, monospace;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+body{
+   
+    box-sizing: border-box;
+    min-height: 100vh;
+    background-color: var(--dart-cyan-color);
+    background-image:  url(images/bg-pattern-bottom.svg) , url(images/bg-pattern-top.svg);
+    background-position: 50vw 50vh, calc(50vw - 1015px) calc(50vh - 864px);
+    background-repeat: no-repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    margin: 0;
+    box-sizing: border-box;
+    padding: 0 20px;
+
+}
+
+
+
+.container{
+  
+   width:var(--container-width);
+   height:var(--container-height);
+   background-color: white;
+   border-radius:var(--container-border-radius) ;
+   -webkit-border-radius:var(--container-border-radius) ;
+   -moz-border-radius:var(--container-border-radius) ;
+   -ms-border-radius:var(--container-border-radius) ;
+   -o-border-radius:var(--container-border-radius) ;
+   transition:transform 0.3s;
+   -webkit-transition:transform 0.3s;
+   -moz-transition:transform 0.3s;
+   -ms-transition:transform 0.3s;
+   -o-transition:transform 0.3s;
+   cursor: pointer;
+   overflow: hidden;   
+   box-shadow: 0 15px 100px 10px rgba(0, 0, 0, 0.4);
+}
+
+.container .top{
+    width: 100%;
+    height: 40%;
+    border-top-right-radius: var(--container-border-radius);
+    border-top-left-radius: var(--container-border-radius);
+    background-image: url(images/bg-pattern-card.svg);
+    position: relative;
+    
+}
+.container .top img{
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    width: 90px;
+    height: 90px;
+    background-color: white;
+    border: 5px solid transparent;
+    position: absolute;
+    bottom: -45px;
+    left: calc(50% - 45px);
+}
+
+.container .bottom {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.bottom .name-age {
+    margin-top: 60px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+ .name-age p:first-child{
+    margin-right: 8px;
+    font-weight: 700;
+    font-size: 18px;
+
+    color: var(--very-dark-desaturated-blue-color);
+}
+ .name-age p:nth-child(2){
+    font-weight: 500;
+    color: var(--dark-grayish-blue-color);
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.name-age + p {
+    margin: 10px 0;
+    font-size: 13px;
+    color: var(--dark-grayish-blue-color);
+}
+
+hr{
+width: 100%;    
+background-color: var(--dark-grayish-blue-color);
+opacity: 0.3;
+
+margin: 20px 0;
+
+}
+
+.stats{
+    display: flex;
+    justify-content: space-evenly;
+    align-self: center;
+    width: 100%;
+}
+.stats div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    
+}
+.stats div p:first-child{
+    font-weight: 700;
+    font-size: 18px;
+    color: var(--very-dark-desaturated-blue-color);
+    margin-bottom: 5px;
+}
+.stats div p:last-child{
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 2px;
+    color: var(--dark-grayish-blue-color);
+}
+
+.attribution{
+    /* font-family: 'Kumbh Sans; */
+    font-size: 16px;
+    text-align: center;
+    color: white;
+    margin-top: 35px;
+    
+}
+.attribution a{ 
+    text-decoration:none;
+    color: aqua;
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.attribution a:hover{ 
+    color: var(--very-dark-desaturated-blue-color);
+    text-decoration: underline;
+}
+
+
+/* Actions */
+
+.container:hover{
+    transform: scale(1.075);
+    -webkit-transform: scale(1.075);
+    -moz-transform: scale(1.075);
+    -ms-transform: scale(1.075);
+    -o-transform: scale(1.075);
+}
+
+.container:hover img{
+    border: 5px var(--dark-grayish-blue-color) double;
+}
+
