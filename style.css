@@ -98,7 +98,7 @@ body{
     justify-content: center;
     align-items: center;
 }
- .name-age p:first-child{
+ .name-age h1{
     margin-right: 8px;
     font-weight: 700;
     font-size: 18px;
