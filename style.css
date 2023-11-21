@@ -42,7 +42,8 @@ body{
 
 .container{
   
-   width:var(--container-width);
+   width:95%;
+   max-width: var(--container-width);
    height:var(--container-height);
    background-color: white;
    border-radius:var(--container-border-radius) ;
